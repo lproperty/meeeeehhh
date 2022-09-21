@@ -1,10 +1,11 @@
-var body = $response.body
-var url = $request.url
+/*
+[rewrite_local]
+^https?:\/\/cat-match\.easygame2021\.com\/sheep\/v1\/game\/map_info_ex\?matchType=.?$ url script-response-body https://raw.githubusercontent.com/harry-sunhao/PersonalRepo/main/Sheep_new.js
+[mitm]
+hostname = cat-match.easygame2021.com
+*/
+var obj = JSON.parse($response.body);
 
-if (body) {
-  var obj = JSON.parse($response.body)
-  obj.blockTypeData = {}
-  $done({ body: JSON.stringify(obj) })
-} else {
-  $done({})
-}
+obj.data.map_seed = [0,0,0,0];
+
+$done({body: JSON.stringify(obj)});

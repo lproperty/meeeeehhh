@@ -8,6 +8,6 @@ hostname = cat-match.easygame2021.com
 */
 var obj = JSON.parse($response.body);
 
-obj.data.map_seed = [-1,-1,-1,-1];
+obj.data.map_seed = [0,0,0,1];
 
 $done({body: JSON.stringify(obj)});

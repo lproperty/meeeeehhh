@@ -8,6 +8,6 @@ hostname = cat-match.easygame2021.com
 */
 var obj = JSON.parse($response.body);
 
-obj.data.state=1;
+obj.data.ts=1664644392;
 
 $done({body: JSON.stringify(obj)});

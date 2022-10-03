@@ -8,6 +8,6 @@ hostname = cat-match.easygame2021.com
 */
 var obj = JSON.parse($response.body);
 
-obj.data.skin_list.push({"id" : 15});
+obj.data.state=1;
 
 $done({body: JSON.stringify(obj)});
